@@ -1,0 +1,218 @@
+//font-size
+.txt16{
+    font-size: 16px;
+    line-height: 24px;
+    margin: 16px 0;
+}
+
+// background-img
+.background_gray{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 470px;
+    background-color: #F7F9FD;
+    z-index: -2;
+    border-radius: 0px 0px 0px 300px;
+    @include phone{
+        height: 495px;
+    }
+}
+.background_megaphone{
+    position: absolute;
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/banner.svg) no-repeat;
+    background-size: contain;
+    width: 885px;
+    height: 559px;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    @include phone{
+        background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/banner_sm.svg) no-repeat;
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+    }
+}
+
+// header
+.price_header{
+    margin-top: 92px;
+    padding-bottom: 300px;
+    .header_txt{
+        font-size: 16px;
+    }
+}
+
+// plan
+.price_plan{
+    width: 909px;
+    .people_box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 60px;
+        @include phone{
+            justify-content: flex-start;
+        }
+        .people_txt{
+            padding: 12px 32px;
+            margin-right: 16px;
+            border: 1px solid #56C4C5;
+            border-radius: 27px;
+            color: #56C4C5;
+            white-space: nowrap;
+            &:nth-child(1){
+                background-color: #56C4C5;
+                color: #FFFFFF;
+            }
+            @include phone{
+                padding: 8px 16px;
+            }
+        }
+    }
+    
+
+ 
+///////////////////////////////////////////////////
+    .version_section{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 66px;
+        @include phone{
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 36px;
+        }
+        .version_box{
+            display: flex;
+            flex-direction: column;
+            @include box-shadow(444px,570px);
+            border-radius: 12px;
+            margin-bottom: 100px;
+            @include phone{
+                @include box-shadow(335px,515px);
+                margin-bottom: 24px;
+            }
+            hr{
+                border: 0.5px solid #DDDDDD;
+                width: 100%;
+                margin: 0;
+            }
+            .content-sm{
+                margin: 30px 0;
+                line-height: 24px;
+                @include phone{
+                    margin: 24px 0;
+                }
+            }
+
+            // innerSection
+            .version_box_inner_section{
+                display: flex;
+                align-items: center;
+                margin: 0 auto;
+                .version_box_gray{
+                    @include box_gray(169px,108px);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    @include phone{
+                        @include box_gray(139px,89px);
+                    }
+                    .title{
+                        font-weight: normal;
+                    }
+                }
+                .equal{
+                    font-size: 29px;
+                    margin: 0 20px;
+                    @include phone{
+                        margin: 0 6px;
+                    }
+                }
+            }
+
+            .version_details{
+                margin: 32px 20px 28px;
+                li{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 16px;
+                    img{
+                        margin-right: 12px;
+                    }
+                }
+                @include phone{
+                    margin: 32px 0px 28px 20px;
+                }
+                .content-sm{
+                    margin-top: 0px;
+                    @include phone{
+                        font-size: 14px;
+                    }
+                }
+
+            }
+            .price_btn{
+                @include price_btn;
+                margin: 0 auto;
+            } 
+        }
+    }
+
+    .problem_section{
+        margin-bottom: 100px;
+        .title{
+            margin-bottom: 48px;
+            @include phone{
+                margin-bottom: 32px;
+            }
+        }
+        .problem_box{
+            @include box-shadow(904px,58px);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+            margin-bottom: 16px;
+            @include phone{
+                @include box-shadow(334px,58px);
+                padding: 0 16px;
+            }
+            .problem_content{
+                font-size: 18px;
+                line-height: 28px;
+                @include phone{
+                    font-size: 16px;
+                    left: 24px;
+                }
+            }
+            &:last-child{
+                @include box-shadow(904px,168px);
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: normal;
+                .problem_content{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                }
+                @include phone{
+                    @include box-shadow(334px,168px);
+
+                }
+            }
+            p{
+                font-size: 16px;
+                line-height: 32px;
+                color: #747474;
+                margin: 0;
+                margin-right: -16px;
+            }
+        }
+    }
+}
+

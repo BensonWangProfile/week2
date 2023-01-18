@@ -1,0 +1,565 @@
+//========= setting ===========
+*{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style: none;
+}
+//========= color ===========
+.main_color{
+    color: #56C4C5;
+    padding: 16px 0;
+}
+.main_fontcolor{
+    color: #56C4C5;
+}
+
+//========= font-size ===========
+h2{
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 70px;
+    @include phone{
+        font-size: 32px;
+        line-height: 46px;
+
+    }
+}
+.title{
+    font-size: 32px;
+    font-weight: bold;
+    @include phone{
+        font-size: 28px;
+        line-height: 40px;
+    }
+}
+.title-sm{
+    font-size: 24px;
+    font-weight: 500;
+    margin: 24px 0;
+    @include phone{
+        font-size: 18px;
+        margin: 16px 0;
+    }
+}
+.content-md{
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 24px;
+    text-align: center;
+    @include phone{
+        font-size: 16px;
+    }
+}
+.content-sm{
+    font-size: 16px;
+}
+span{
+    font-size: 12px;
+    margin: 8px 0;
+    color: #221E1F;
+}
+.mg16{
+    margin-bottom: 16px;
+}
+.mg48{
+    margin-bottom: 48px;
+    @include phone{
+        margin-bottom: 32px;
+    }
+}
+.mg100{
+    margin-top: 100px;
+}
+.mglf32{
+    margin-left: 32px;
+}
+// width
+.section969{
+    width: 969px;        
+}
+.section1088{
+    width: 1088px;
+}
+.box244{
+    width: 244px;
+}
+.shadow_box260{
+    @include box-shadow(260px,388px);
+    border-radius: 12px;
+}
+// position
+.txt_center{
+    text-align: center;
+}
+
+
+
+//========= background-img ===========
+.background_home{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 850.36px;
+    height: 770px;
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home.svg) no-repeat;
+    @include phone{
+        background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home_sm.svg) no-repeat;
+        position: absolute;
+        top: 324px;
+        left: 50%;
+        right: 0;
+        transform: translateX(-50%);
+        width: 350px;
+        height: 260px;
+    }
+}
+.header{
+    position: relative;
+}
+.background_banner{
+    position: absolute;
+    left: 0;
+    top: bottom;
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball01.svg) no-repeat;
+    transform: rotate(180deg);
+    z-index: -1;
+    width: 138px;
+    height: 360px;
+    @include phone{
+        width: 49px;
+        height: 126px;
+        top: 671px;
+        background-size: cover;
+    }
+}
+.background_charact{
+    position: absolute;
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg) no-repeat;
+    z-index: -1;
+    width: 220px;
+    height: 320px;
+    right: -40px;
+    top: 1720px;
+    @include phone{
+        top: 3120px;
+        right: 0;
+        width: 88px;
+        height: 135px;
+        background-size: cover;
+    }
+}
+.background_feedback{
+    position: absolute;
+    z-index: -1;
+    top: 2700px;
+    left: 60px;
+    @include phone{
+        top: 4950px;
+        left: -30px;
+    }
+}
+
+// outter //////////////////////////////
+.container_fluid{
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    .navbar{
+        max-width: 1085px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 0 ;
+        margin: 0 auto;
+        @include phone{
+            background-color: #FFFFFF;
+            width: 100%;
+            padding: 24px 20px;
+            border-bottom: 2px solid #FFD153;
+        }
+        .logo h1{
+            width: 218.6px;
+            height: 40px;
+            background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/logo.png?raw=true);
+            background-size: contain;
+            background-repeat: no-repeat;
+            text-indent: 101%;
+            white-space: nowrap;
+            overflow: hidden;
+            @include phone{
+                width: 130px;
+                height: 24px;
+            }
+        }
+        .price a{
+            padding: 8px 32px;
+            background-color: #FF5D50;
+            border-radius: 22px;
+            color: #FFFFFF;
+        }
+    }
+}
+
+//========= main ===========
+.container{
+    max-width: 1085px;     // 1085/1366=80%
+    margin: 0 auto;
+    @include phone{
+        max-width: 335px;
+        margin: 0 auto;
+    }
+    // .navbar{
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: space-between;
+    //     padding: 24px 0 ;
+    //     @include phone{
+    //         background-color: #FFFFFF;
+    //         width: 100%;
+    //     }
+    //     .logo h1{
+    //         width: 218.6px;
+    //         height: 40px;
+    //         background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/logo.png?raw=true);
+    //         background-size: contain;
+    //         background-repeat: no-repeat;
+    //         text-indent: 101%;
+    //         white-space: nowrap;
+    //         overflow: hidden;
+    //         @include phone{
+    //             width: 130px;
+    //             height: 24px;
+    //         }
+    //     }
+    //     .price a{
+    //         padding: 8px 32px;
+    //         background-color: #FF5D50;
+    //         border-radius: 22px;
+    //         color: #FFFFFF;
+    //     }
+    // }
+    .banner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 534px;
+        @include phone{
+            @include col;
+            align-items: flex-start;
+            justify-content: unset;
+            height: 596px;
+            margin: 32px 0 0 0;
+
+        }
+        .banner_content{
+            .banner_content_green{
+                color: #56C4C5;
+                margin-bottom: 8px;
+            }
+            .banner_content_title{
+                margin-bottom: 16px;
+            }
+            .banner_content_txt{
+                font: normal 20px/29px Noto Sans TC;
+                @include phone{
+                    font-size: 16px;
+                }
+            }
+        }
+        .banner_img{
+            width: 532px;
+            height: 534px;
+            @include phone{
+                width: 304px;
+                height: 305px;
+                margin-top: 32px;
+            }
+        }
+    }
+}
+// 這邊跳出container感覺不太行
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 217px;
+    position: relative;
+    @include phone{
+        margin-top: 60px;
+    }
+    .contact_section{
+        display: flex;
+        justify-content: space-between;
+        @include phone{
+            @include col;
+        }
+        .contact_box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include phone{
+                margin-bottom: 24px;
+            }
+            .contact_img{
+                width: 90px;
+                height: 90px;
+                @include phone{
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            .content-sm{
+                line-height: 24px;
+                text-align: center;
+                color: #747474;
+            }
+            .charact_img260{
+                width: 260px;
+                height: 260px;
+                border-radius: 12px 12px 0 0;
+            }
+            .charact_content{
+                font:normal 16px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+// intro
+.intro{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 100px;
+    @include phone{
+        @include col;
+    }
+    .intro_content_box{
+        width: 38%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        @include phone{
+            width: 100%;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 44px;
+        }
+        .intro_content{
+            font:normal 18px;
+            line-height: 24px;
+            margin: 16px 0 36px;
+        }
+    }
+    .price_btn{
+        @include price_btn;
+    }
+    .intro_section{
+        display: flex;
+        flex-wrap: wrap; 
+        width: 62%;
+        @include phone{
+            width: 100%;
+            justify-content: center;    
+        }
+        .intro_box{
+            @include box-shadow(230px,280px);
+            border-radius: 12px;
+            margin:0 47px 28px 0 ;
+            &:nth-child(even){
+                margin-right: 0;
+            }
+            @include phone{
+                margin:0px 0px 24px ;
+            }
+            .intro_img_box{
+                @include box-shadow(86px,86px);
+                border-radius: 50%;
+                margin-top: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }   
+            .intro_title{
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 26px;
+                margin: 24px 0 16px 32px;
+            }
+            .intro_content{
+                font-size: 16px;
+                font-weight: normal;
+                line-height: 24px;
+            }
+        }
+
+    }
+}
+
+// feedback
+.feedback{
+    margin-top: 100px;
+    @include phone{
+        margin-top: 36px;
+    }
+    .title{
+        margin-bottom: 104px;
+        @include phone{
+            margin-bottom: 32px;
+        }
+    }
+    .feedback_section{
+        display: flex;
+        justify-content: space-between;
+        transition: .6s;
+        // @include phone{
+        //     box-sizing: content-box;
+        //     width: 352px;
+        //     height: 248px;
+        //     overflow: hidden;
+        //     padding: 60px 10px 10px;
+        //     margin-left: -10px;
+        // }
+        .feedback_box{
+            @include box-shadow(352px,248px);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            @include phone{
+                margin-right: 15px;
+            }
+            .feedback_img{
+                position: absolute;
+                top: -56px;
+                left: 32px;
+                img{
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                }
+            }
+            .feedback_box_content{
+                margin: 48px 0 24px;
+                width: 288px;
+                .feedback_content{
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: normal;
+                }
+                hr{
+                    margin: 24px 0;
+                    color: #DDDDDD;
+                }
+                .feedback_title{
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin-bottom: 8px;
+                }
+                .user{
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+    .pagination{
+        @include pagination;
+        @include phone{
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.slide_box{
+    @include phone{
+        box-sizing: content-box;
+        width: 352px;
+        height: 248px;
+        overflow: hidden;
+        padding: 60px 10px 10px;
+        margin-left: -10px;
+    }
+}
+// footer
+.footer{
+    max-width: 100%;
+    .footer_section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/home_footer.svg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: contain;
+        width: 100%;
+        height: 503px;
+        @include phone{
+            height: 461px;
+            background-size: cover;
+        }
+        .title{
+            margin-top: 260px;
+            @include phone{
+                margin: 293px 0 36px;
+                font-size: 24px;
+            }
+        }
+        .price_btn{
+            @include price_btn;
+            margin-top: 60px;
+            @include phone{
+                margin: 0 0 72px;
+            }
+        }
+    }
+}
+.footer_copyright{
+    background-color: #F5F5F5;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+// top_btn
+.top_btn{
+    position: fixed;
+    top: 674px;
+    right: 48px;
+    background-color: #56C4C5;
+    width: 71px;
+    height: 71px;
+    border: none;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    a{
+        font-size:18px;
+        color: #FFFFFF;
+        @include phone{
+            font-size: 14px;
+        }
+    }
+    @include phone{
+        width: 50px;
+        height: 50px;
+        top: 602px;
+        right: 16px;
+    }
+}
+
+
+
+
+
